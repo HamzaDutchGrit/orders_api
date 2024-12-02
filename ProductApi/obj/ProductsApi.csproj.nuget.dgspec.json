@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hamzq\\OneDrive\\Bureaublad\\ProductApi\\ProductsApi.csproj": {}
+    "C:\\stage\\orders_api\\ProductApi\\ProductsApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hamzq\\OneDrive\\Bureaublad\\ProductApi\\ProductsApi.csproj": {
+    "C:\\stage\\orders_api\\ProductApi\\ProductsApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hamzq\\OneDrive\\Bureaublad\\ProductApi\\ProductsApi.csproj",
+        "projectUniqueName": "C:\\stage\\orders_api\\ProductApi\\ProductsApi.csproj",
         "projectName": "ProductsApi",
-        "projectPath": "C:\\Users\\Hamzq\\OneDrive\\Bureaublad\\ProductApi\\ProductsApi.csproj",
+        "projectPath": "C:\\stage\\orders_api\\ProductApi\\ProductsApi.csproj",
         "packagesPath": "C:\\Users\\Hamzq\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hamzq\\OneDrive\\Bureaublad\\ProductApi\\obj\\",
+        "outputPath": "C:\\stage\\orders_api\\ProductApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hamzq\\AppData\\Roaming\\NuGet\\NuGet.Config",

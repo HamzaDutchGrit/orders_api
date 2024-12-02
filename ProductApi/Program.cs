@@ -56,6 +56,7 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+
 // Swagger-configuratie
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -68,6 +69,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
+
+app.UseCors("AllowAllOrigins");
 
 // Zorg dat de database gemigreerd is bij het starten
 using (var scope = app.Services.CreateScope())

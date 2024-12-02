@@ -1,33 +1,19 @@
-# Use .NET 8.0 SDK as the base image
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-
-# Set the working directory
-WORKDIR /src
-
-# Copy only the project file first
-COPY ["ProductApi/ProductApi.csproj", "ProductApi/"]
-
-# Restore dependencies
-RUN dotnet restore "ProductApi/ProductApi.csproj"
-
-# Copy the rest of the source code
-COPY . .
-
-# Set working directory to the project folder
-WORKDIR /src/ProductApi
-
-# Build and publish the application
-RUN dotnet build "ProductApi.csproj" -c Release -o /app/build
-RUN dotnet publish "ProductApi.csproj" -c Release -o /app/publish
-
-# Use the ASP.NET Core runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+# Stage 1: Build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
 
-# Copy build output
-COPY --from=build /app/publish .
+# Copy the project file and restore dependencies
+COPY ./ProductApi/ProductApi.csproj ./ProductApi/
+RUN dotnet restore ./ProductApi/ProductApi.csproj
 
-# Set the entrypoint
+# Copy the rest of the files and build
+COPY ./ProductApi ./ProductApi
+WORKDIR /app/ProductApi
+RUN dotnet publish -c Release -o out
+
+# Stage 2: Runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /app
+COPY --from=build-env /app/ProductApi/out ./
+
 ENTRYPOINT ["dotnet", "ProductApi.dll"]
