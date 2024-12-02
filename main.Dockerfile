@@ -1,36 +1,36 @@
 # Build stage
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
-# Werkdirectory instellen
+# Zet de werkdirectory in /src
 WORKDIR /src
 
 # Kopieer de .csproj bestanden
-COPY productapi/ProductsApi.csproj productapi/
+COPY ./productapi/ProductsApi.csproj ./productapi/
 
-# Zorg ervoor dat de dependencies worden gedownload
-RUN dotnet restore productapi/ProductsApi.csproj
+# Herstel de afhankelijkheden
+RUN dotnet restore ./productapi/ProductsApi.csproj
 
-# Kopieer alle andere bestanden
+# Kopieer de rest van de bestanden
 COPY . .
 
 # Bouw de applicatie
 WORKDIR /src/productapi
-RUN dotnet build productapi/ProductsApi.csproj -c Release -o /app/build
+RUN dotnet build ./productapi/ProductsApi.csproj -c Release -o /app/build
 
 # Publiceer de applicatie
-RUN dotnet publish productapi/ProductsApi.csproj -c Release -o /app/publish
+RUN dotnet publish ./productapi/ProductsApi.csproj -c Release -o /app/publish
 
 # Runtime stage
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 
-# Werkdirectory instellen
+# Zet de werkdirectory naar /app
 WORKDIR /app
 
-# Poorten blootstellen voor webverkeer
+# Stel poorten bloot
 EXPOSE 80
 EXPOSE 443
 
-# Kopieer de gepubliceerde bestanden uit de build stage
+# Kopieer de gepubliceerde bestanden
 COPY --from=build /app/publish .
 
 # Start de applicatie
