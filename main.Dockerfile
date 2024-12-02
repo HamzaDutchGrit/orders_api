@@ -1,37 +1,32 @@
-# Build stage
+# Gebruik een officiële .NET SDK image om de buildomgeving op te zetten
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
-# Zet de werkdirectory in /src
+# Zet de werkdirectory voor de build
 WORKDIR /src
 
-# Kopieer de .csproj bestanden
-COPY ./productapi/ProductsApi.csproj ./productapi/
+# Kopieer de .csproj bestanden naar de container
+COPY orders_api/ProductApi/ProductsApi.csproj orders_api/ProductApi/
 
-# Herstel de afhankelijkheden
-RUN dotnet restore ./productapi/ProductsApi.csproj
+# Restore de dependencies
+RUN dotnet restore orders_api/ProductApi/ProductsApi.csproj
 
-# Kopieer de rest van de bestanden
+# Kopieer de overige broncode
 COPY . .
 
 # Bouw de applicatie
-WORKDIR /src/productapi
-RUN dotnet build ./productapi/ProductsApi.csproj -c Release -o /app/build
+RUN dotnet build orders_api/ProductApi/ProductsApi.csproj -c Release -o /app/build
 
 # Publiceer de applicatie
-RUN dotnet publish ./productapi/ProductsApi.csproj -c Release -o /app/publish
+RUN dotnet publish orders_api/ProductApi/ProductsApi.csproj -c Release -o /app/publish
 
-# Runtime stage
+# Gebruik een officiële .NET runtime image om de gepubliceerde applicatie te draaien
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 
-# Zet de werkdirectory naar /app
+# Zet de werkdirectory voor de runtime container
 WORKDIR /app
 
-# Stel poorten bloot
-EXPOSE 80
-EXPOSE 443
-
-# Kopieer de gepubliceerde bestanden
+# Kopieer de gepubliceerde applicatie vanuit de buildcontainer
 COPY --from=build /app/publish .
 
-# Start de applicatie
+# Stel het commando in om de applicatie te starten
 ENTRYPOINT ["dotnet", "ProductsApi.dll"]
