@@ -1,28 +1,29 @@
-# Gebruik .NET 8.0 SDK als basisafbeelding
+# Use .NET 8.0 SDK as the base image
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
-# Stel de werkdirectory in
+# Set the working directory
 WORKDIR /src
 
-# Kopieer het projectbestand en herstel dependencies
-COPY ProductsApi.csproj ./
-RUN dotnet restore "./ProductsApi.csproj"
+# Copy the project file and restore any dependencies (via dotnet restore)
+COPY ProductApi/ProductApi.csproj ProductApi/
+RUN dotnet restore "ProductApi/ProductApi.csproj"
 
-# Kopieer de rest van de code en bouw het project
-COPY . ./
-RUN dotnet build "./ProductsApi.csproj" -c Release -o /app/build
+# Copy the rest of the source code and build the project
+COPY . .
+WORKDIR /src/ProductApi
+RUN dotnet build "ProductApi.csproj" -c Release -o /app/build
 
-# Publiceer de applicatie
-RUN dotnet publish "./ProductsApi.csproj" -c Release -o /app/publish
+# Publish the application
+RUN dotnet publish "ProductApi.csproj" -c Release -o /app/publish
 
-# Gebruik de ASP.NET Core-runtime-afbeelding voor de definitieve fase
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+# Use the ASP.NET Core runtime image for the final stage
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-# Kopieer de build-uitvoer van de build-container
+# Copy the build output from the build container
 COPY --from=build /app/publish .
 
-# Stel het startpunt in naar je applicatie
-ENTRYPOINT ["dotnet", "ProductsApi.dll"]
+# Set the entrypoint to your app
+ENTRYPOINT ["dotnet", "ProductApi.dll"]
