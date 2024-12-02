@@ -5,16 +5,16 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # Copy the project file and restore any dependencies (via dotnet restore)
-COPY DepotWebAPI/DepotWebAPI.csproj DepotWebAPI/
-RUN dotnet restore "DepotWebAPI/DepotWebAPI.csproj"
+COPY ProductApi/ProductApi.csproj ProductApi/
+RUN dotnet restore "ProductApi/ProductApi.csproj"
 
 # Copy the rest of the source code and build the project
 COPY . .
-WORKDIR /src/DepotWebAPI
-RUN dotnet build "DepotWebAPI.csproj" -c Release -o /app/build
+WORKDIR /src/ProductApi
+RUN dotnet build "ProductApi.csproj" -c Release -o /app/build
 
 # Publish the application
-RUN dotnet publish "DepotWebAPI.csproj" -c Release -o /app/publish
+RUN dotnet publish "ProductApi.csproj" -c Release -o /app/publish
 
 # Use the ASP.NET Core runtime image for the final stage
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
@@ -26,4 +26,4 @@ EXPOSE 443
 COPY --from=build /app/publish .
 
 # Set the entrypoint to your app
-ENTRYPOINT ["dotnet", "DepotWebAPI.dll"]
+ENTRYPOINT ["dotnet", "ProductApi.dll"]
