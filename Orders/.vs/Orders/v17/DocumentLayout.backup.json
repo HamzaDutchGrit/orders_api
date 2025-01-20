@@ -1,26 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Hamzq\\Desktop\\Orders\\Orders\\",
+  "WorkspaceRootPath": "C:\\stage\\orders_api\\Orders\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0415D301-5F3D-432F-A634-81C73E8B9687}|Orders\\Orders.csproj|c:\\users\\hamzq\\desktop\\orders\\orders\\orders\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0415D301-5F3D-432F-A634-81C73E8B9687}|Orders\\Orders.csproj|c:\\stage\\orders_api\\orders\\orders\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0415D301-5F3D-432F-A634-81C73E8B9687}|Orders\\Orders.csproj|solutionrelative:orders\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0415D301-5F3D-432F-A634-81C73E8B9687}|Orders\\Orders.csproj|c:\\users\\hamzq\\desktop\\orders\\orders\\orders\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0415D301-5F3D-432F-A634-81C73E8B9687}|Orders\\Orders.csproj|solutionrelative:orders\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0415D301-5F3D-432F-A634-81C73E8B9687}|Orders\\Orders.csproj|c:\\users\\hamzq\\desktop\\orders\\orders\\orders\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0415D301-5F3D-432F-A634-81C73E8B9687}|Orders\\Orders.csproj|c:\\stage\\orders_api\\orders\\orders\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0415D301-5F3D-432F-A634-81C73E8B9687}|Orders\\Orders.csproj|solutionrelative:orders\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0415D301-5F3D-432F-A634-81C73E8B9687}|Orders\\Orders.csproj|c:\\users\\hamzq\\desktop\\orders\\orders\\orders\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0415D301-5F3D-432F-A634-81C73E8B9687}|Orders\\Orders.csproj|c:\\stage\\orders_api\\orders\\orders\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0415D301-5F3D-432F-A634-81C73E8B9687}|Orders\\Orders.csproj|solutionrelative:orders\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0415D301-5F3D-432F-A634-81C73E8B9687}|Orders\\Orders.csproj|c:\\users\\hamzq\\desktop\\orders\\orders\\orders\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0415D301-5F3D-432F-A634-81C73E8B9687}|Orders\\Orders.csproj|c:\\stage\\orders_api\\orders\\orders\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0415D301-5F3D-432F-A634-81C73E8B9687}|Orders\\Orders.csproj|solutionrelative:orders\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0415D301-5F3D-432F-A634-81C73E8B9687}|Orders\\Orders.csproj|c:\\stage\\orders_api\\orders\\orders\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0415D301-5F3D-432F-A634-81C73E8B9687}|Orders\\Orders.csproj|solutionrelative:orders\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,65 +34,67 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\Hamzq\\Desktop\\Orders\\Orders\\Orders\\Models\\Order.cs",
+              "DocumentMoniker": "C:\\stage\\orders_api\\Orders\\Orders\\Models\\Order.cs",
               "RelativeDocumentMoniker": "Orders\\Models\\Order.cs",
-              "ToolTip": "C:\\Users\\Hamzq\\Desktop\\Orders\\Orders\\Orders\\Models\\Order.cs",
+              "ToolTip": "C:\\stage\\orders_api\\Orders\\Orders\\Models\\Order.cs",
               "RelativeToolTip": "Orders\\Models\\Order.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-17T14:42:50.203Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\stage\\orders_api\\Orders\\Orders\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Orders\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\stage\\orders_api\\Orders\\Orders\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Orders\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAUwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T14:42:35.167Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "OrdersController.cs",
-              "DocumentMoniker": "C:\\Users\\Hamzq\\Desktop\\Orders\\Orders\\Orders\\Controllers\\OrdersController.cs",
-              "RelativeDocumentMoniker": "Orders\\Controllers\\OrdersController.cs",
-              "ToolTip": "C:\\Users\\Hamzq\\Desktop\\Orders\\Orders\\Orders\\Controllers\\OrdersController.cs",
-              "RelativeToolTip": "Orders\\Controllers\\OrdersController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAUwCgAAAAAAAAAAAAAAA==",
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\stage\\orders_api\\Orders\\Orders\\Models\\OrderItem.cs",
+              "RelativeDocumentMoniker": "Orders\\Models\\OrderItem.cs",
+              "ToolTip": "C:\\stage\\orders_api\\Orders\\Orders\\Models\\OrderItem.cs",
+              "RelativeToolTip": "Orders\\Models\\OrderItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA8wAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-17T14:42:35.167Z",
-              "IsPinned": true
+              "WhenOpened": "2025-01-17T14:50:50.131Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "OrderItem.cs",
-              "DocumentMoniker": "C:\\Users\\Hamzq\\Desktop\\Orders\\Orders\\Orders\\Models\\OrderItem.cs",
-              "RelativeDocumentMoniker": "Orders\\Models\\OrderItem.cs",
-              "ToolTip": "C:\\Users\\Hamzq\\Desktop\\Orders\\Orders\\Orders\\Models\\OrderItem.cs",
-              "RelativeToolTip": "Orders\\Models\\OrderItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-17T14:50:50.131Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Hamzq\\Desktop\\Orders\\Orders\\Orders\\Models\\ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\stage\\orders_api\\Orders\\Orders\\Models\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Orders\\Models\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Hamzq\\Desktop\\Orders\\Orders\\Orders\\Models\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\stage\\orders_api\\Orders\\Orders\\Models\\ApplicationDbContext.cs",
               "RelativeToolTip": "Orders\\Models\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-17T15:23:33.07Z"
+              "WhenOpened": "2025-01-17T15:23:33.07Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Hamzq\\Desktop\\Orders\\Orders\\Orders\\Program.cs",
+              "DocumentMoniker": "C:\\stage\\orders_api\\Orders\\Orders\\Program.cs",
               "RelativeDocumentMoniker": "Orders\\Program.cs",
-              "ToolTip": "C:\\Users\\Hamzq\\Desktop\\Orders\\Orders\\Orders\\Program.cs",
+              "ToolTip": "C:\\stage\\orders_api\\Orders\\Orders\\Program.cs",
               "RelativeToolTip": "Orders\\Program.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAwwEMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-17T14:42:08.329Z",
               "EditorCaption": ""

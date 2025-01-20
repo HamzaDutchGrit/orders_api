@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EAEeTvoktMA=",
+  "dgSpecHash": "30x2+ooPtb4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hamzq\\Desktop\\Orders\\Orders\\Orders\\Orders.csproj",
+  "projectFilePath": "C:\\stage\\orders_api\\Orders\\Orders\\Orders.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hamzq\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Hamzq\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
